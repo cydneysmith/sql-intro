@@ -13,5 +13,12 @@
 -- | 2019 | 30       |
 -- | 2020 | 30       |
 -- +------+----------+
+-- start without groups: how many rows in the teams table
+SELECT COUNT(*)
+FROM teams;
 
+-- how to change ^ to get what we're looking for.
+SELECT year, count(name)
+FROM teams
+GROUP BY year;
 

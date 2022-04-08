@@ -39,4 +39,19 @@
 -- | Washington Nationals          | 78.0             |
 -- +-------------------------------+------------------+
 
+-- start simple: ave number of wins across all teams and all seasons in teams table
+SELECT AVG(wins)
+FROM teams;
+
+-- now adjust to get what we're looking for
+SELECT name, AVG(wins)
+FROM teams
+GROUP BY name;
+
+-- now add teams from 21st century using WHERE Clause
+
+SELECT name, AVG(wins)
+FROM teams
+WHERE year > 2000
+GROUP BY name;
 
