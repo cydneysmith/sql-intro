@@ -40,5 +40,5 @@ FROM players
 INNER JOIN stats ON players.id = stats.player_id
 INNER JOIN teams ON stats.team_id = teams.id
 WHERE teams.year = 2019
-GROUP BY (teams.name);
+GROUP BY teams.name;
 
